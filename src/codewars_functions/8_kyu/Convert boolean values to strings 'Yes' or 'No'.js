@@ -29,9 +29,7 @@ function boolToWord( bool ){
     if( bool ){
         return "Yes";
     }
-
     return "No";
-
 }
 
 describe("Basic tests", () => {
