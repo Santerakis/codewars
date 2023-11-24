@@ -82,6 +82,7 @@ class SmallestIntegerFinder {
     }
 }
 
+
 describe("Smallest Integer Tests", () => {
     let sif = new SmallestIntegerFinder();
     it("Fixed Tests", () => {
