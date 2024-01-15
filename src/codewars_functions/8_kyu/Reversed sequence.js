@@ -41,6 +41,10 @@ const reverseSeq = n => {
     return [n].concat(reverseSeq(n-1));
 };
 
+function hero(bullets, dragons){
+    return dragons * 2 <= bullets;
+}
+
 describe("reverseSeq", function() {
     it("Sample Test", function() {
         assert.deepEqual(reverseSeq(5), [5, 4, 3, 2, 1]);
