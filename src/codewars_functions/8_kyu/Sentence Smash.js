@@ -63,6 +63,7 @@ function smash (words) {
 
 
 
+
 describe("smash", () =>  {
 
     it ("Should return empty string for empty array.", () => {
