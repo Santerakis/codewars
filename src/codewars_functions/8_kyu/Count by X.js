@@ -1,0 +1,78 @@
+// Create a function with two arguments that will return an array of the first n multiples of x.
+//
+//     Assume both the given number and the number of times to count will be positive numbers greater than 0.
+//
+// Return the results as an array or list ( depending on language ).
+// Examples
+//
+// countBy(1,10) === [1,2,3,4,5,6,7,8,9,10]
+// countBy(2,5) === [2,4,6,8,10]
+
+function countBy(x, n) {
+    var z = [];
+    for (i = 1; i <= n; i++) {
+        z.push(x * i);
+    }
+    return z;
+}
+
+const countBy = (x, n) => Array.from({length: n}, (v, k) => (k + 1) * x)
+
+const countBy = (x, n) =>
+    [...Array(n)].map((_, idx) => ++idx * x);
+
+function countBy(x, n) {
+    var z = [];
+    for (var i=x; i<=(x*n); i+=x){
+        z.push(i);
+    }
+    return z
+}
+
+function countBy(x, n) {
+    let z = [];
+    for (let i = 1; i <= n; i++) {
+        z.push(x * i);
+    }
+    return z;
+}
+
+function countBy(x, n) {
+    var z = [];
+    while (z.length < n) z.push(x * (z.length + 1));
+    return z;
+}
+
+const countBy = (x, n) => Array.from({length: n}, (_, k) => (k + 1) * x);
+
+function countBy(x, n){
+    return Array.apply(0, Array(n)).map(function(v, i){
+        return (i + 1) * x;
+    });
+}
+
+function countBy(x, n) {
+    for (var a = [], i = 0; i < n; i++) {
+        a.push(x * (1 + i))
+    }
+    return a
+}
+
+function countBy(x, n) {
+    return Array.apply(null, Array(n)).map((_, i) => (i+1)*x);
+}
+
+function countBy(x, n) {
+    var z = [];
+    for(i = 1; i <= n; i++){
+        z.push(i * x);
+    }
+    return z;
+}
+
+describe("Basic Tests",function(){
+    it("Testing for fixed tests", () => {
+        assert.deepEqual(countBy(1,10), [1,2,3,4,5,6,7,8,9,10], "Array does not match")
+        assert.deepEqual(countBy(2,5), [2,4,6,8,10], "Array does not match")
+    });
+});
